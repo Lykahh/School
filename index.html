@@ -6,6 +6,27 @@
     <title>My School</title>
     <link rel="stylesheet" href="style.css">
 </head>
+
+<body>
+<div id="loginScreen" class="card">
+    <h2>Welcome Back!</h2>
+    <input type="text" id="username" placeholder="Username">
+    <input type="password" id="password" placeholder="Password">
+    <button onclick="login()">Login</button>
+</div>
+
+<div id="diaryScreen" class="card" style="display: none;">
+    <h2>My Diary</h2>
+    <textarea id="newEntry" placeholder="Write something..."></textarea>
+    <button onclick="addEntry()">Add Entry</button>
+    <div id="entries"></div>
+    <button onclick="logout()" class="logout-btn">Logout</button>
+</div>
+
+<script src="script.js"></script>
+</body>
+
+
 <body>
 
 <header>
