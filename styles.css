@@ -1,4 +1,4 @@
-/* Reset some defaults */
+
 * {
     margin: 0;
     padding: 0;
@@ -7,97 +7,131 @@
 
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background-color: #f4f6f9;
+    background: #f8f9fc;
     color: #333;
     line-height: 1.6;
 }
 
-/* Header */
+
 header {
-    background-color: #004080;
-    color: #fff;
-    padding: 40px 20px;
+    background: linear-gradient(to right, #004080, #0059b3);
+    color: white;
     text-align: center;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    padding: 60px 20px;
 }
 
 header h1 {
-    font-size: 2.5em;
+    font-size: 3em;
     margin-bottom: 10px;
 }
 
 header p {
     font-size: 1.2em;
+    opacity: 0.9;
 }
 
-/* Navigation */
+
 nav {
-    background-color: #003366;
-    padding: 12px 0;
+    background-color: #002e5c;
+    padding: 15px 0;
     text-align: center;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
     position: sticky;
     top: 0;
-    z-index: 10;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+    z-index: 100;
 }
 
 nav a {
     color: #fff;
-    margin: 0 20px;
+    margin: 0 25px;
     text-decoration: none;
-    font-weight: bold;
-    transition: color 0.3s ease;
+    font-weight: 500;
+    font-size: 1em;
+    transition: color 0.3s;
 }
 
 nav a:hover {
     color: #ffcc00;
 }
 
-/* Section styling */
+
 section {
-    max-width: 900px;
-    margin: 30px auto;
-    padding: 30px;
-    background-color: #fff;
+    max-width: 1100px;
+    margin: 40px auto;
+    background: white;
+    padding: 40px;
     border-radius: 12px;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.05);
 }
 
 section h2 {
-    margin-bottom: 15px;
+    font-size: 2em;
+    margin-bottom: 20px;
     color: #004080;
 }
 
-ul {
-    list-style: disc;
-    padding-left: 20px;
+section p,
+section ul {
+    font-size: 1.05em;
 }
 
-/* Button styling */
+ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+ul li {
+    background: #e6f0ff;
+    margin: 10px 0;
+    padding: 10px 15px;
+    border-left: 5px solid #0059b3;
+    border-radius: 6px;
+}
+
 button {
-    margin-top: 15px;
-    padding: 10px 20px;
+    margin-top: 20px;
+    padding: 12px 25px;
     background-color: #004080;
     color: #fff;
     border: none;
-    border-radius: 8px;
+    border-radius: 10px;
     font-size: 1em;
     cursor: pointer;
-    transition: background-color 0.3s ease;
+    transition: background-color 0.3s ease, transform 0.2s ease;
 }
 
 button:hover {
-    background-color: #00264d;
+    background-color: #003366;
+    transform: scale(1.05);
 }
 
-/* Footer */
 footer {
     text-align: center;
     padding: 20px;
-    background-color: #ddd;
+    background-color: #e2e2e2;
     font-size: 0.9em;
-    color: #555;
-    margin-top: 40px;
+    color: #444;
     border-top: 1px solid #ccc;
+    margin-top: 50px;
 }
 
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 2em;
+    }
+
+    nav a {
+        display: inline-block;
+        margin: 10px;
+        font-size: 0.95em;
+    }
+
+    section {
+        padding: 25px;
+        margin: 20px 10px;
+    }
+
+    button {
+        width: 100%;
+    }
+}
