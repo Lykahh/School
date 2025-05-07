@@ -8,38 +8,34 @@
 </head>
 <body>
 
-<!-- ЛОГИН -->
-  <center>
-  <div id="loginScreen" class="card">
-    <h2>Student Login</h2>
-    <input type="text" id="username" placeholder="Enter your name" />
-    <input type="password" id="password" placeholder="Password" />
-    <button onclick="login()">Login</button>
+<!-- LOGIN -->
+  <div id="loginScreen" class="page">
+    <div class="card">
+      <h2>Student Login</h2>
+      <input type="text" id="username" placeholder="Enter your name" />
+      <input type="password" id="password" placeholder="Password" />
+      <button onclick="login()">Login</button>
+    </div>
   </div>
-  </center>
-  
-  
-<!-- ОСНОВНОЙ КОНТЕНТ -->
-<center>
 
-<div id="mainContent" class="img">
-  <header>
+  <!-- MAIN CONTENT-->
+  <div id="mainContent" class="page" style="display: none;">
+    <div class="img">
+      <header>
+        <h1>Student Portal</h1>
+        <p id="welcomeText">Welcome, Student!</p>
+      </header>
+      <nav>
+        <a href="#dashboard">Dashboard</a>
+        <a href="#assignments">Assignments</a>
+        <a href="#olympiads">Olympiads</a>
+        <a href="#ranking">Ranking</a>
+        <a href="#contact">Contact</a>
+        <a href="#" onclick="logout()" style="float:right;">Logout</a>
+      </nav>
+    </div>
+
     
-    <h1>Student Portal</h1>
-    <p id="welcomeText">Welcome, Student!</p>
-  </header>
-  
-  <nav>
-    <a href="#dashboard">Dashboard</a>
-    <a href="#assignments">Assignments</a>
-    <a href="#olympiads">Olympiads</a>
-    <a href="#ranking">Ranking</a>
-    <a href="#contact">Contact</a>
-    <a href="#" onclick="logout()" style="float:right; margin-right:20px;">Logout</a>
-  </nav>
- </div>
-  
-  
   <div>
   <section id="dashboard">
     <h2>Dashboard</h2>
