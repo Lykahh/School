@@ -10,6 +10,9 @@
     rgba(0, 0, 0, 0.7) 10%,
     rgba(0, 0, 0, 0) 100%
   ), url('https://avatars.mds.yandex.net/get-altay/12851611/2a0000018e2cef4811dbe89b66e485ea56ef/XXXL');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
   color: white;
   padding: 1rem 2rem;
   display: flex;
