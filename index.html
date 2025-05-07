@@ -8,84 +8,85 @@
 </head>
 <body>
 
-<header>
-  <h1>Student Portal</h1>
-  <p>Your place to grow, learn, and achieve.</p>
-</header>
+<!-- ЛОГИН -->
+<div id="loginScreen" class="card">
+  <h2>Student Login</h2>
+  <input type="text" id="username" placeholder="Enter your name" />
+  <input type="password" id="password" placeholder="Password" />
+  <button onclick="login()">Login</button>
+</div>
 
-<nav>
-  <a href="#dashboard">Dashboard</a>
-  <a href="#assignments">Assignments</a>
-  <a href="#olympiads">Olympiads</a>
-  <a href="#ranking">Ranking</a>
-  <a href="#contact">Contact</a>
-</nav>
+<!-- ОСНОВНОЙ КОНТЕНТ -->
+<div id="mainContent" style="display: none;">
 
-<section id="dashboard">
-  <h2>Welcome, Student!</h2>
-  <p>Access all your school-related info in one place.</p>
-</section>
+  <header>
+    <h1>Student Portal</h1>
+    <p id="welcomeText">Welcome, Student!</p>
+  </header>
 
-<section id="assignments">
-  <h2>Upcoming Assignments</h2>
-  <ul>
-    <li>Math Homework - Due: May 10</li>
-    <li>Biology Project - Due: May 12</li>
-    <li>History Essay - Due: May 14</li>
-  </ul>
-</section>
+  <nav>
+    <a href="#dashboard">Dashboard</a>
+    <a href="#assignments">Assignments</a>
+    <a href="#olympiads">Olympiads</a>
+    <a href="#ranking">Ranking</a>
+    <a href="#contact">Contact</a>
+    <a href="#" onclick="logout()" style="float:right; margin-right:20px;">Logout</a>
+  </nav>
 
-<section id="olympiads">
-  <h2>Upcoming Olympiads</h2>
-  <ul>
-    <li>Math Olympiad – May 20</li>
-    <li>Physics Challenge – June 3</li>
-    <li>Informatics Contest – June 10</li>
-  </ul>
-</section>
+  <section id="dashboard">
+    <h2>Dashboard</h2>
+    <p>Access your personalized data here.</p>
+  </section>
 
-<section id="ranking">
-  <h2>Student Ranking</h2>
-  <table class="ranking-table">
-    <tr>
-      <th>#</th>
-      <th>Name</th>
-      <th>Average Score</th>
-    </tr>
-    <tr>
-      <td>1</td>
-      <td>Anna Ivanova</td>
-      <td>98%</td>
-    </tr>
-    <tr>
-      <td>2</td>
-      <td>Dmitry Petrov</td>
-      <td>95%</td>
-    </tr>
-    <tr>
-      <td>3</td>
-      <td>Elena Volkova</td>
-      <td>93%</td>
-    </tr>
-  </table>
-</section>
+  <section id="assignments">
+    <h2>Upcoming Assignments</h2>
+    <ul>
+      <li>Math Homework - Due: May 10</li>
+      <li>Biology Project - Due: May 12</li>
+    </ul>
+  </section>
 
-<section id="contact">
-  <h2>Contact</h2>
-  <p>Email: student.support@myschool.com</p>
-  <p>Phone: +123-456-7890</p>
-  <button onclick="showMessage()">Need Help?</button>
-</section>
+  <section id="olympiads">
+    <h2>Upcoming Olympiads</h2>
+    <ul>
+      <li>Physics Olympiad – May 20</li>
+    </ul>
+  </section>
 
-<footer>
-  <p>&copy; 2025 My School. All rights reserved.</p>
-</footer>
+  <section id="ranking">
+    <h2>Grades & Ranking</h2>
 
-<script>
-  function showMessage() {
-    alert("Student support will contact you shortly.");
-  }
-</script>
+    <label for="filterSubject">Filter by Subject:</label>
+    <select id="filterSubject" onchange="filterGrades()">
+      <option value="all">All</option>
+      <option value="Math">Math</option>
+      <option value="Physics">Physics</option>
+      <option value="English">English</option>
+    </select>
 
+    <table class="ranking-table" id="gradesTable">
+      <tr>
+        <th>Subject</th>
+        <th>Grade</th>
+      </tr>
+      <tr data-subject="Math"><td>Math</td><td>95%</td></tr>
+      <tr data-subject="Physics"><td>Physics</td><td>88%</td></tr>
+      <tr data-subject="English"><td>English</td><td>91%</td></tr>
+    </table>
+  </section>
+
+  <section id="contact">
+    <h2>Contact</h2>
+    <p>Email: student.support@myschool.com</p>
+    <p>Phone: +123-456-7890</p>
+    <button onclick="showMessage()">Need Help?</button>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 My School. All rights reserved.</p>
+  </footer>
+</div>
+
+<script src="script.js"></script>
 </body>
 </html>
