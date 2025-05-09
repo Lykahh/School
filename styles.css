@@ -3,14 +3,12 @@
 }
 
 .img {
-  width: 100%;
-  height: 100vh;
   background: radial-gradient(
     ellipse at center,
     rgba(0, 0, 0, 0.7) 10%,
     rgba(0, 0, 0, 0) 100%
   ), url('https://avatars.mds.yandex.net/get-altay/12851611/2a0000018e2cef4811dbe89b66e485ea56ef/XXXL');
-  background-size: cover;
+  background-size: auto;
   background-repeat: no-repeat;
   background-position: center;
   color: white;
